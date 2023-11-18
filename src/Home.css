@@ -1,0 +1,49 @@
+/* test design */
+
+#two {
+  height: 700px;
+  position: relative;
+  margin: 10px;
+  border-style: groove;
+  border-radius: 0.5em;
+  overflow: hidden; /* Ensure the animation doesn't overflow */
+}
+
+#two::before {
+  content: "";
+  background-image: url("Images/IMG_5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  animation: backgroundAnimation 20s infinite alternate linear; /* Adjust the animation duration as needed */
+}
+
+#three {
+  color: #000;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font */
+  padding: 50px; /* Add some padding to make the text more readable */
+}
+
+.container {
+  max-width: 800px;
+  margin: 10px auto;
+  margin-bottom: 100px;
+  font-size: 1.2em; /* Adjust font size as needed */
+}
+
+/* Keyframe animation for the background */
+@keyframes backgroundAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
